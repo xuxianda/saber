@@ -1,0 +1,4 @@
+	inet 10.92.9.21 netmask 0xffffff00 broadcast 10.92.9.255
+	inet 192.168.191.251 netmask 0xffffff00 broadcast 192.168.191.255
+	inet 192.168.32.111 netmask 0xffffff00 broadcast 192.168.32.255
+	inet 192.168.2.1 netmask 0xffffff00 broadcast 192.168.2.255

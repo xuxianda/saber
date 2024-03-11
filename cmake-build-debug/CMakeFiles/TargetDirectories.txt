@@ -1,0 +1,3 @@
+/Users/astolfo/my-project/host-report/cmake-build-debug/CMakeFiles/host-helper.dir
+/Users/astolfo/my-project/host-report/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/astolfo/my-project/host-report/cmake-build-debug/CMakeFiles/rebuild_cache.dir
