@@ -11,9 +11,9 @@ public:
 
 	Command();
 
-	bool exec(const char* commandStr);
+	bool exec(std::string commandStr);
 
 };
 
 
-extern 	std::map<const char*, std::string> systemCommandMap;
+extern 	std::map<std::string, std::string> systemCommandMap;

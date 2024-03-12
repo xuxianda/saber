@@ -1,6 +1,6 @@
 #include "Command.h"
 
-std::map<const char*, std::string> systemCommandMap = std::map<const char*, std::string>();
+std::map<std::string, std::string> systemCommandMap = std::map<std::string, std::string>();
 
 
 Command::Command()
@@ -11,7 +11,7 @@ Command::Command()
 	systemCommandMap["Linux"] = R"(ifconfig | grep -v "127.0.0.1" | grep  "inet " > )" + outputFileName;
 }
 
-bool Command::exec(const char* sys)
+bool Command::exec(std::string sys)
 {
 	std::string commandStr = systemCommandMap[sys];
 	if (commandStr.empty())

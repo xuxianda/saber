@@ -14,6 +14,13 @@ public:
 	/// <returns>
 	///		系统类型字符串
 	/// </returns>
-	const char* getLocalSystemType();
+	std::string getLocalSystemType();
+
+
+	/// <summary>
+	/// 获取应用程序运行路径
+	/// </summary>
+	/// <returns></returns>
+	std::string getApplicationPath();
 
 };
