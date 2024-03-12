@@ -14,7 +14,7 @@
 #### 未来计划
 
 支持设备其他信息的上报，比如CPU、GPU、Mem、Temp等
-提供socket、modbus、mqtt上报方式
+提供socket、modbus、mqtt上报方式                                
 
 
 
