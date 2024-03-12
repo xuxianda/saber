@@ -6,12 +6,6 @@ class Net {
 
 public:
 
-	string host;
-
-	int port;
-
-	Net();
-
-	Net(string* host, int port);
+    string post(string* data, string* url, string* path);
 
 };

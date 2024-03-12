@@ -10,12 +10,14 @@ if (POLICY CMP0141)
 endif()
 
 project ("host-report")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inih)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cpp-httplib)
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (host-helper "Application.cpp" "Application.h"  "net/Net.cpp" "net/Net.h" "util/SysUtils.cpp" "util/SysUtils.h" "util/SysCheck.cpp" "util/Command.cpp" "util/Command.h" "util/FileUtils.cpp")
+add_executable (host-helper  "inih/ini.c" "inih/ini.h" "inih/cpp/INIReader.cpp" "inih/cpp/INIReader.h"  "cpp-httplib/httplib.h" "Application.cpp" "Application.h"  "net/Net.cpp" "net/Net.h" "util/SysUtils.cpp" "util/SysUtils.h" "util/SysCheck.cpp" "util/Command.cpp" "util/Command.h" "util/FileUtils.cpp"
+        "config/InitConfig.cpp" "config/InitConfig.h")
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET host-helper PROPERTY CXX_STANDARD 20)
 endif()
-
-# TODO: 如有需要，请添加测试并安装目标。
