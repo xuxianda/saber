@@ -1,4 +1,4 @@
-## Host-Report
+## Saber
 
 - [中文](#中文)
 - [English](#English)
@@ -6,15 +6,16 @@
 
 ### 中文  
 
-#### 如果设备是动态IP且无法随时随地的查看IP地址，可以使用这个工具将IP上报到你所指定的任意地方
+#### 抓取设备信息并上报到你指定的位置
 
-目前支持 Windows、Linux、Macos
-已支持将IP地址信息上报至远程Http接口
+目前支持 Windows、Linux、macOS
+已支持将IP地址信息上报至远程地址（HTTP）
 
 #### 未来计划
 
-支持设备其他信息的上报，比如CPU、GPU、Mem、Temp等
-提供socket、modbus、mqtt上报方式                                
+支持设备硬件信息（CPU、GPU、Mem、Temp）、日志文件、文本等数据的上报。
+提供TCP, Modbus, MQTT上报方式。
+抓取到的数据直接塞入数据库或者消息中间件等方式。                        
 
 
 
@@ -25,15 +26,12 @@
 
 
 
+#### Capture device information and report it to the location you specify
 
-### English  
-
-#### If the device is a dynamic IP and cannot view the IP address anytime, anywhere, you can use this tool to report the IP to any location you specify
-Currently supports Windows, Linux, and macOS
-
-Supported reporting IP address information to remote HTTP interface
+Currently supports Windows, Linux, macOS
+Supported reporting IP address information to a remote address (HTTP)
 
 #### Future plan
 
-Support reporting of other device information, such as CPU, GPU, Mem, Temp, etc.
-Provide socket, Modbus, and MQTT reporting methods
+Supports reporting of device hardware information (CPU, GPU, Mem, Temp), log files, text, and other data. Provide TCP, Modbus, and MQTT reporting methods.
+The captured data is directly inserted into the database or message middleware.
