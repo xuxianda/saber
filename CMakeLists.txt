@@ -12,7 +12,7 @@ endif()
 project ("host-report")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (host-helper "host-helper.cpp" "host-helper.h"  "net/net.cpp" "net/net.h" "util/sys.cpp" "util/sys.h" "util/sys_check.cpp" "util/command.cpp" "util/command.h" "util/file_utils.cpp")
+add_executable (host-helper "Application.cpp" "Application.h"  "net/Net.cpp" "net/Net.h" "util/SysUtils.cpp" "util/SysUtils.h" "util/SysCheck.cpp" "util/Command.cpp" "util/Command.h" "util/FileUtils.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET host-helper PROPERTY CXX_STANDARD 20)
