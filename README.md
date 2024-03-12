@@ -17,6 +17,15 @@
 提供socket、modbus、mqtt上报方式
 
 
+
+
+
+
+
+
+
+
+
 ### English  
 
 #### If the device is a dynamic IP and cannot view the IP address anytime, anywhere, you can use this tool to report the IP to any location you specify
