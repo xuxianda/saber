@@ -2,13 +2,12 @@
 //
 
 #include "Application.h"
-using namespace std;
 
 int main() {
     printf("Host-Report开始运行，正在获取配置信息...\n");
     try {
         InitConfig initConfigObj = InitConfig();
-    } catch (const runtime_error err) {
+    } catch (const std::runtime_error err) {
         printf("%s\n", err.what());
         return 0;
     }
@@ -21,13 +20,13 @@ int main() {
     commandObj.exec(systemName);
     printf("当前运行环境： %s\n", systemName);
 
-    string fileName = commandObj.outputFileName;
+    std::string fileName = commandObj.outputFileName;
     FileUtils().viewContent(&fileName);
 
     while (true) {
         printf("%s", "正在等待远程连接获取本机信息，输入exit退出\n");
-        string inputStr;
-        getline(cin, inputStr);
+        std::string inputStr;
+        std::getline(std::cin, inputStr);
 
         if (inputStr == "exit") {
             break;

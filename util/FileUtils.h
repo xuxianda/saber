@@ -2,11 +2,10 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
 class FileUtils {
 
 public:
 
-	string viewContent(string* filePath);
+	std::string viewContent(std::string* filePath);
 
 };

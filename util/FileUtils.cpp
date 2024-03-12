@@ -1,14 +1,14 @@
 #include "FileUtils.h"
 
-string FileUtils::viewContent(string* filePath)
+std::string FileUtils::viewContent(std::string* filePath)
 {
-	string total;
-	ifstream file;
+	std::string total;
+	std::ifstream file;
 	file.open(filePath->c_str());
 	if (file.is_open())
 	{
-		string line;
-		while (getline(file,line))
+		std::string line;
+		while (std::getline(file,line))
 		{
 			total += line + "\n";
 		}

@@ -2,7 +2,7 @@
 #include "httplib.h"
 
 
-string Net::post(std::string *data, string *host, string *path)
+std::string Net::post(std::string *data, std::string *host, std::string *path)
 {
 
     httplib::Client client(host->c_str());
@@ -15,7 +15,7 @@ string Net::post(std::string *data, string *host, string *path)
         printf("数据上报远程响应：%s\n", res->body.c_str());
         return res->body;
     }
-    cerr << "数据上报失败：: " << res.error() << std::endl;
+    std::cerr << "数据上报失败：: " << res.error() << std::endl;
     if (res) {
         std::cerr << "HTTP状态码： " << res->status << std::endl;
     }

@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by 许显达 on 2024/3/12.
 //
 #include "InitConfig.h"
@@ -7,7 +7,7 @@
 InitConfig::InitConfig() {
     INIReader reader("config.ini");
     if (reader.ParseError() != 0) {
-        throw runtime_error("config.ini文件读取失败");
+        throw std::runtime_error("config.ini 文件读取失败");
     }
 
     type = reader.Get("Remote", "type", "HTTP");

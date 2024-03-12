@@ -5,20 +5,18 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class InitConfig {
 
 
 public:
 
-    string type;
+    std::string type;
 
     int port;
 
-    string host;
+    std::string host;
 
-    string path;
+    std::string path;
 
     int sleep;
 

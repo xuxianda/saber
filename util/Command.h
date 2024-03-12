@@ -2,13 +2,12 @@
 #include <map>
 #include <iostream>
 
-using namespace std;
 
 class Command {
 
 public:
 
-	string outputFileName;
+	std::string outputFileName;
 
 	Command();
 
@@ -17,4 +16,4 @@ public:
 };
 
 
-extern 	map<const char*, string> systemCommandMap;
+extern 	std::map<const char*, std::string> systemCommandMap;

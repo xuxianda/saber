@@ -1,6 +1,6 @@
 #include "Command.h"
 
-map<const char*, string> systemCommandMap = map<const char*, string>();
+std::map<const char*, std::string> systemCommandMap = std::map<const char*, std::string>();
 
 
 Command::Command()
@@ -13,7 +13,7 @@ Command::Command()
 
 bool Command::exec(const char* sys)
 {
-	string commandStr = systemCommandMap[sys];
+	std::string commandStr = systemCommandMap[sys];
 	if (commandStr.empty())
 	{
 		return false;

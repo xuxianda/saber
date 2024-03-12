@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
-#include "../../../cmake/inih/ini.h"
+#include "ini.h"
 #include "INIReader.h"
 
 using std::string;
