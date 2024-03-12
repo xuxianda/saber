@@ -1,0 +1,12 @@
+# ninja log v5
+4	39	7319132622607373	CMakeFiles/host-helper.dir/util/sys_check.cpp.obj	f7f6260ff8000d74
+3	728	7319132629485525	CMakeFiles/host-helper.dir/util/sys.cpp.obj	bf7c81993a4760ca
+3	768	7319132629871204	CMakeFiles/host-helper.dir/net/net.cpp.obj	3850d437e835929c
+1	847	7319132630630911	CMakeFiles/host-helper.dir/host-helper.cpp.obj	cfa0e21c112d01ad
+6	883	7319132631001697	CMakeFiles/host-helper.dir/util/file_utils.cpp.obj	e1e24605b5c54935
+5	947	7319132631643495	CMakeFiles/host-helper.dir/util/command.cpp.obj	b1543c32dd57a447
+947	1025	7319132632326506	host-helper.exe	b75a0afc6cbc2d34
+2	633	7319134515237429	CMakeFiles/host-helper.dir/host-helper.cpp.obj	cfa0e21c112d01ad
+635	708	7319134515874433	host-helper.exe	b75a0afc6cbc2d34
+2	628	7319134792235338	CMakeFiles/host-helper.dir/host-helper.cpp.obj	cfa0e21c112d01ad
+628	701	7319134792844140	host-helper.exe	b75a0afc6cbc2d34

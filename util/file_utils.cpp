@@ -13,7 +13,7 @@ string file_utils::viewContent(string* filePath)
 			total += line + "\n";
 		}
 	}
-	printf("缃戠粶杩炴帴淇℃伅锛歕n\n");
+	printf("网络连接信息：\n\n");
 	printf("%s \n",total.c_str());
 	return total;
 }

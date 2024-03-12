@@ -23,5 +23,19 @@ int main()
 
 	string fileName = commandObj.outputFileName;
 	file_utils().viewContent(&fileName);
+
+	while (true)
+	{
+		printf("%s","正在等待远程连接获取网络信息，输入exit退出\n");
+		string inputStr;
+		getline(cin, inputStr);
+
+		if (inputStr == "exit")
+		{
+			break;
+		}
+
+	}
+
 	return 0;
 }
