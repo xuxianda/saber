@@ -8,6 +8,6 @@ class FileUtils {
 
 public:
 
-	std::string viewContent(std::string* filePath);
+    std::string viewContent(std::string filePath);
 
 };

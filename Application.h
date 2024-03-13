@@ -7,10 +7,12 @@
 #include "util/SysUtils.h"
 #include "util/Command.h"
 #include "util/FileUtils.h"
-#include "config/InitConfig.h"
-
+#include "util/AsyncReport.h"
 // TODO: 在此处引用程序需要的其他标头。
 
 int main();
 
 void printCPPVersion();
+
+
+void netTask();
