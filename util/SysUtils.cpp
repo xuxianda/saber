@@ -158,26 +158,26 @@ std::string SysUtils::getMACAddress() {
     std::string macAddress;
 #ifdef _WIN32
     // Windows 获取网卡地址
-        PIP_ADAPTER_INFO adapterInfo;
-        ULONG buflen = sizeof(PIP_ADAPTER_INFO);
-        adapterInfo = (IP_ADAPTER_INFO *)malloc(buflen);
-        if (adapterInfo == NULL) {
-            return "Error: Unable to allocate memory needed to call GetAdaptersinfo";
-        }
-        if (GetAdaptersInfo(adapterInfo, &buflen) == ERROR_BUFFER_OVERFLOW) {
-            free(adapterInfo);
-            adapterInfo = (IP_ADAPTER_INFO *)malloc(buflen);
-            if (adapterInfo == NULL) {
-                return "Error: Unable to allocate memory needed to call GetAdaptersinfo";
-            }
-        }
-        if (GetAdaptersInfo(adapterInfo, &buflen) == NO_ERROR) {
-            macAddress = adapterInfo->Address[0];
-            for (DWORD i = 1; i < adapterInfo->AddressLength; i++) {
-                macAddress += ":" + std::to_string(adapterInfo->Address[i]);
-            }
-        }
-        free(adapterInfo);
+//        PIP_ADAPTER_INFO adapterInfo;
+//        ULONG buflen = sizeof(PIP_ADAPTER_INFO);
+//        adapterInfo = (IP_ADAPTER_INFO *)malloc(buflen);
+//        if (adapterInfo == NULL) {
+//            return "Error: Unable to allocate memory needed to call GetAdaptersinfo";
+//        }
+//        if (GetAdaptersInfo(adapterInfo, &buflen) == ERROR_BUFFER_OVERFLOW) {
+//            free(adapterInfo);
+//            adapterInfo = (IP_ADAPTER_INFO *)malloc(buflen);
+//            if (adapterInfo == NULL) {
+//                return "Error: Unable to allocate memory needed to call GetAdaptersinfo";
+//            }
+//        }
+//        if (GetAdaptersInfo(adapterInfo, &buflen) == NO_ERROR) {
+//            macAddress = adapterInfo->Address[0];
+//            for (DWORD i = 1; i < adapterInfo->AddressLength; i++) {
+//                macAddress += ":" + std::to_string(adapterInfo->Address[i]);
+//            }
+//        }
+//        free(adapterInfo);
 #elif __linux__
     // Linux 获取网卡地址
         std::ifstream file("/sys/class/net/eth0/address");
