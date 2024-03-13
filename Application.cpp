@@ -13,7 +13,7 @@ int main() {
     SysUtils sysUtils = SysUtils();
     printf("当前路径：%s\n", sysUtils.getApplicationPath().c_str());
     printf("设备名：%s\n", sysUtils.getDeviceName().c_str());
-    printf("MAC：%s\n", sysUtils.getMACAddress().c_str());
+    //printf("MAC：%s\n", sysUtils.getMACAddress().c_str());
     printf("CPU：%s\n", sysUtils.getCPUInfo().c_str());
     printf("GPU：%s\n", sysUtils.getGPUInfo().c_str());
     printf("MEM：%llu %s\n", sysUtils.getMemInfo(), "byte");
