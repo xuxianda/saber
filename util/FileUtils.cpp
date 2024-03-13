@@ -1,4 +1,4 @@
-#include "FileUtils.h"
+﻿#include "FileUtils.h"
 
 std::string FileUtils::viewContent(std::string filePath) {
     std::string total;

@@ -18,6 +18,8 @@ public:
 
     std::string path;
 
+    std::string token;
+
     int sleep;
 
     /// <summary>
