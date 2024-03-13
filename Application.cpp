@@ -9,19 +9,14 @@ std::string netInfo;
 InitConfig initConfigObj;
 
 int main() {
-    printf("Host-Report开始运行，正在获取配置信息...\n");
-    printCPPVersion();
+    startPrint();
     SysUtils sysUtils = SysUtils();
     printf("当前路径：%s\n", sysUtils.getApplicationPath().c_str());
-
     Command commandObj = Command();
     try {
         std::string configName = "config.ini";
         initConfigObj = InitConfig();
-
-        bool hasConfig = initConfigObj.exist(configName);
-        printf("是否存在配置文件：%d\n", hasConfig);
-        if (!hasConfig) {
+        if (!initConfigObj.exist(configName)) {
             initConfigObj.generateConfigFile(configName);
         }
         printf("正在读取配置文件...\n");
@@ -66,7 +61,10 @@ void netTask() {
 }
 
 
-void printCPPVersion() {
+void startPrint() {
+    printf("Saber 开始运行，正在获取配置信息...\n");
+
+
     // 根据不同的编译器，这些宏可能会有所不同
     // 对于GCC和Clang系列编译器
 #if defined(__GNUC__) && defined(__cplusplus)

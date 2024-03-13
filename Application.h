@@ -12,7 +12,6 @@
 
 int main();
 
-void printCPPVersion();
-
+void startPrint();
 
 void netTask();
