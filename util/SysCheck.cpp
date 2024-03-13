@@ -1,4 +1,4 @@
-static bool isWin32()
+﻿static bool isWin32()
 {
 #ifdef _WIN32
 	return true;

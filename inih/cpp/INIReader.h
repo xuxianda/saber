@@ -1,4 +1,4 @@
-// Read an INI file into easy-to-access name/value pairs.
+﻿// Read an INI file into easy-to-access name/value pairs.
 
 // SPDX-License-Identifier: BSD-3-Clause
 

@@ -20,14 +20,11 @@ public:
 
 	int sleep;
 
-	InitConfig();
-
-
 	/// <summary>
 	/// 加载配置文件
 	/// </summary>
-	/// <param name="fileName"></param>
-	void init(std::string fileName);
+	void init();
+
 
 	/// <summary>
 	/// 初始化配置文件
@@ -39,7 +36,7 @@ public:
 	/// 判断文件是否存在
 	/// </summary>
 	/// <returns></returns>
-	bool exist();
+	bool exist(std::string filePath);
 
 };
 

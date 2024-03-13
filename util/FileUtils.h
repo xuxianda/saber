@@ -1,6 +1,8 @@
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <string>
+#include <codecvt>
+#include <locale>
 
 class FileUtils {
 

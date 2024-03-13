@@ -1,4 +1,4 @@
-#include "Command.h"
+﻿#include "Command.h"
 
 std::map<std::string, std::string> systemCommandMap = std::map<std::string, std::string>();
 

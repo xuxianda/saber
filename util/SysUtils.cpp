@@ -1,4 +1,4 @@
-#include "SysUtils.h"
+ï»¿#include "SysUtils.h"
 #include "SysCheck.cpp"
 #include <iostream>
 #include <string>
@@ -31,7 +31,7 @@ std::string SysUtils::getLocalSystemType()
 	}
 	else
 	{
-		throw std::runtime_error("µ±Ç°»·¾³²»Ö§³ÖÔËĞĞ");
+		throw std::runtime_error("å½“å‰ç¯å¢ƒä¸æ”¯æŒè¿è¡Œ");
 	}
 
 	return returnStr;

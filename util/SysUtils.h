@@ -1,5 +1,6 @@
-#include <iostream>
-
+ï»¿#include <iostream>
+#include <codecvt>
+#include <string>
 
 class SysUtils {
 
@@ -9,16 +10,16 @@ public:
 
 
 	/// <summary>
-	///		»ñÈ¡µ±Ç°ÏµÍ³ÀàĞÍ
+	///		è·å–å½“å‰ç³»ç»Ÿç±»å‹
 	/// </summary>
 	/// <returns>
-	///		ÏµÍ³ÀàĞÍ×Ö·û´®
+	///		ç³»ç»Ÿç±»å‹å­—ç¬¦ä¸²
 	/// </returns>
 	std::string getLocalSystemType();
 
 
 	/// <summary>
-	/// »ñÈ¡Ó¦ÓÃ³ÌĞòÔËĞĞÂ·¾¶
+	/// è·å–åº”ç”¨ç¨‹åºè¿è¡Œè·¯å¾„
 	/// </summary>
 	/// <returns></returns>
 	std::string getApplicationPath();
