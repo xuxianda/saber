@@ -2,11 +2,13 @@
 #include "httplib.h"
 
 
-std::string Net::post(std::string data, std::string host, std::string path,std::string token) {
+std::string Net::post(std::string data, std::string host, std::string path, std::string token) {
 	httplib::Client client(host.c_str());
 	client.set_read_timeout(10, 0);
-	auto res = client.Post(path.c_str(), data.c_str(), "application/text");
 
+	httplib::Headers headers;
+	headers.insert({ "accessToken","token123456789" });
+	auto res = client.Post(path.c_str(), headers, data.c_str(), "application/text");
 	if (res && res->status == 200) {
 		printf("数据上报远程响应：\n%s\n", res->body.c_str());
 		return res->body;
