@@ -144,7 +144,7 @@ endif()
 
 # Adds our cmake folder to the search path for find_package
 # This is so we can use our custom FindBrotli.cmake
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_MODULE_PATH "cmake")
 if(HTTPLIB_REQUIRE_BROTLI)
 	find_package(Brotli COMPONENTS encoder decoder common REQUIRED)
 	set(HTTPLIB_IS_USING_BROTLI TRUE)
@@ -199,7 +199,7 @@ else()
 	# This is for header-only.
 	set(_INTERFACE_OR_PUBLIC INTERFACE)
 	add_library(${PROJECT_NAME} INTERFACE)
-	set(_httplib_build_includedir "${CMAKE_CURRENT_SOURCE_DIR}")
+	set(_httplib_build_includedir ".")
 endif()
 # Lets you address the target with httplib::httplib
 # Only useful if building in-tree, versus using it from an installation.
@@ -282,7 +282,7 @@ if(HTTPLIB_INSTALL)
 		"${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
 		# Install it so it can be used later by the httplibConfig.cmake file.
 		# Put it in the same dir as our config file instead of a global path so we don't potentially stomp on other packages.
-		"${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindBrotli.cmake"
+		"cmake/FindBrotli.cmake"
 		DESTINATION ${_TARGET_INSTALL_CMAKEDIR}
 	)
 

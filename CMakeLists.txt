@@ -10,14 +10,14 @@ if (POLICY CMP0141)
 endif()
 
 project ("saber")
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inih)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cpp-httplib)
+include_directories(src/inih)
+include_directories(src/cpp-httplib)
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (saber  "Application.cpp" "Application.h"  "net/Net.cpp" "net/Net.h" "util/SysUtils.cpp" "util/SysUtils.h" "util/SysCheck.cpp" "util/Command.cpp" "util/Command.h" "util/FileUtils.cpp"
-        "config/InitConfig.cpp" "config/InitConfig.h" "inih/ini.c" "inih/ini.h" "inih/cpp/INIReader.cpp" "inih/cpp/INIReader.h"  "cpp-httplib/httplib.h"
-        util/AsyncReport.cpp
-        util/AsyncReport.h)
+add_executable (saber  "src/Application.cpp" "src/Application.h"  "src/net/Net.cpp" "src/net/Net.h" "src/util/SysUtils.cpp" "src/util/SysUtils.h" "src/util/SysCheck.cpp" "src/util/Command.cpp" "src/util/Command.h" "src/util/FileUtils.cpp"
+        "src/config/InitConfig.cpp" "src/config/InitConfig.h" "src/inih/ini.c" "src/inih/ini.h" "src/inih/cpp/INIReader.cpp" "src/inih/cpp/INIReader.h"  "src/cpp-httplib/httplib.h"
+        src/util/AsyncReport.cpp
+        src/util/AsyncReport.h)
 
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
