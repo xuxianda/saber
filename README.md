@@ -17,9 +17,9 @@
 
 #### 未来计划
 
-> 支持设备硬件信息（CPU、GPU、Mem、Temp）、日志文件、文本等数据的上报。
-> 提供TCP, Modbus, MQTT上报方式。
-> 抓取到的数据直接塞入数据库或者消息中间件等方式。
+> 支持设备硬件信息（CPU、GPU、Mem、Temp）、日志文件、文本等数据的上报。  
+> 提供TCP, Modbus, MQTT上报方式。  
+> 可以将抓取到的数据直接塞入数据库或者消息中间件。
 
 ### English
 
@@ -35,6 +35,6 @@
 
 #### Future plan
 
-> Supports reporting of device hardware information (CPU, GPU, Mem, Temp), log files, text, and other data. Provide TCP,
-> Modbus, and MQTT reporting methods.
+> Supports reporting of device hardware information (CPU, GPU, Mem, Temp), log files, text, and other data.  
+> Provide TCP,Modbus, and MQTT reporting methods.  
 > The captured data is directly inserted into the database or message middleware.
