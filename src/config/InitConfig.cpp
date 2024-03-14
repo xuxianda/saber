@@ -21,9 +21,9 @@ void InitConfig::generateConfigFile(std::string fileName) {
         configFile << "type=HTTP\n";
         configFile << "\n";
         configFile << "[HTTP]\n";
-        configFile << "host=http://192.168.2.1:53191\n";
+        configFile << "host=http://127.0.0.1:53191\n";
         configFile << "path=/api/v1/device\n";
-        configFile << "sleep=5000\n";
+        configFile << "sleep=15000\n";
         configFile << "token=token123456789\n";
         configFile.flush();
         configFile.close();
@@ -46,9 +46,10 @@ void InitConfig::init(std::string fileName) {
     printf("成功读取到配置文件\n");
     printf("选择上报方式为：%s\n", type.c_str());
     if (type.compare("HTTP") == 0) {
-        host = reader.Get("HTTP", "host", "http://127.0.0.1:8080");
-        path = reader.Get("HTTP", "path", "/input");
-        sleep = stoi(reader.Get("HTTP", "sleep", "5000"));
+        host = reader.Get("HTTP", "host", "http://127.0.0.1:53191");
+        path = reader.Get("HTTP", "path", "/api/v1/device");
+        // 默认15秒上报一次
+        sleep = stoi(reader.Get("HTTP", "sleep", "15000"));
         token = reader.Get("HTTP", "token", "token123456789");
         id = reader.Get("Device", "id", StrUtils().uuid());
         printf("上报地址为%s\n", host.c_str());
