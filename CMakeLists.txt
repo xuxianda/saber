@@ -17,7 +17,9 @@ include_directories(src/cpp-httplib)
 add_executable (saber  "src/Application.cpp" "src/Application.h"  "src/net/Net.cpp" "src/net/Net.h" "src/util/SysUtils.cpp" "src/util/SysUtils.h" "src/util/SysCheck.cpp" "src/util/Command.cpp" "src/util/Command.h" "src/util/FileUtils.cpp"
         "src/config/InitConfig.cpp" "src/config/InitConfig.h" "src/inih/ini.c" "src/inih/ini.h" "src/inih/cpp/INIReader.cpp" "src/inih/cpp/INIReader.h"  "src/cpp-httplib/httplib.h"
         src/util/AsyncReport.cpp
-        src/util/AsyncReport.h)
+        src/util/AsyncReport.h
+        src/util/StrUtils.cpp
+        src/util/StrUtils.h)
 
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)

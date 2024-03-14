@@ -20,6 +20,8 @@ public:
 
     std::string token;
 
+    std::string id;
+
     int sleep;
 
     /// <summary>
