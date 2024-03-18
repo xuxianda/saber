@@ -20,6 +20,7 @@
 #include <fstream>
 #include <sstream>
 #include <unistd.h>
+#include <limits.h>
 #else
 #include <unistd.h>
 #endif
