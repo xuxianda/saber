@@ -16,7 +16,7 @@ int main() {
     //printf("MAC：%s\n", sysUtils.getMACAddress().c_str());
     printf("CPU：%s\n", sysUtils.getCPUInfo().c_str());
     printf("GPU：%s\n", sysUtils.getGPUInfo().c_str());
-    printf("MEM：%llu %s\n", sysUtils.getMemInfo(), "byte");
+    printf("MEM：%lu %s\n", sysUtils.getMemInfo(), "byte");
     Command commandObj = Command();
     try {
         std::string configName = "config.ini";

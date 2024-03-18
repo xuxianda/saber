@@ -9,7 +9,6 @@
 #include <intrin.h>
 #pragma comment(lib, "IPHLPAPI.lib")
 #elif _APPLE_ || __MACH__
-
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/sysctl.h>
@@ -20,9 +19,9 @@
 #elif __linux__
 #include <fstream>
 #include <sstream>
+#include <unistd.h>
 #else
 #include <unistd.h>
-
 #endif
 
 
@@ -70,7 +69,7 @@ std::string SysUtils::getDeviceName() {
         DWORD size = sizeof(computerName);
         GetComputerNameA(computerName, &size);
         deviceName = computerName;
-#elif __linux__ || __APPLE__
+#elif __linux__ || __APPLE__ || __MACH__
     // 获取 Linux 或 macOS 计算机名
     char hostname[256];
     gethostname(hostname, sizeof(hostname));
