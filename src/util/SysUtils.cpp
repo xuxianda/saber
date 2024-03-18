@@ -2,7 +2,7 @@
 #include "SysCheck.cpp"
 #include <string>
 
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
 #include <windows.h>
 #include <VersionHelpers.h>
 #include <Pdh.h>
@@ -39,7 +39,7 @@ std::string SysUtils::getLocalSystemType() {
     } else if (isLinux()) {
         returnStr = "Linux";
     } else {
-        throw std::runtime_error("当前环境不支持运行");
+        throw std::runtime_error("当前环境不支持运行\n");
     }
 
     return returnStr;
@@ -47,7 +47,7 @@ std::string SysUtils::getLocalSystemType() {
 
 
 std::string SysUtils::getApplicationPath() {
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
     wchar_t buffer[MAX_PATH];
     GetModuleFileNameW(NULL, buffer, MAX_PATH);
     std::wstring wpath(buffer);
@@ -64,7 +64,7 @@ std::string SysUtils::getApplicationPath() {
 
 std::string SysUtils::getDeviceName() {
     std::string deviceName;
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
     // 获取 Windows 计算机名
         char computerName[MAX_COMPUTERNAME_LENGTH + 1];
         DWORD size = sizeof(computerName);
@@ -84,7 +84,7 @@ std::string SysUtils::getDeviceName() {
 
 std::string SysUtils::getCPUInfo() {
     std::string cpuName;
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
     HKEY hKey;
         if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
         {
@@ -124,7 +124,7 @@ std::string SysUtils::getGPUInfo() {
 
 uint64_t SysUtils::getMemInfo() {
 // 获取内存信息
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
     MEMORYSTATUSEX statex;
         statex.dwLength = sizeof(statex);
         GlobalMemoryStatusEx(&statex);
@@ -156,7 +156,7 @@ uint64_t SysUtils::getMemInfo() {
 
 std::string SysUtils::getMACAddress() {
     std::string macAddress;
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
     // Windows 获取网卡地址
 //        PIP_ADAPTER_INFO adapterInfo;
 //        ULONG buflen = sizeof(PIP_ADAPTER_INFO);

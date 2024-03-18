@@ -1,6 +1,6 @@
 ﻿static bool isWin32()
 {
-#ifdef _WIN32
+#ifdef defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
 	return true;
 #endif
 	return false;
@@ -9,7 +9,7 @@
 
 static bool isApple()
 {
-#ifdef _APPLE_
+#ifdef __APPLE__
 	return true;
 #elif  __MACH__
     return true;
@@ -20,7 +20,7 @@ static bool isApple()
 
 static bool isLinux()
 {
-#ifdef _linux_
+#ifdef __linux__
 	return true;
 #endif
 	return false;
