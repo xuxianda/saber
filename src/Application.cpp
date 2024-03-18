@@ -1,7 +1,4 @@
-﻿// host-helper.cpp: 定义应用程序的入口点。
-//
-
-#include <thread>
+﻿#include <thread>
 #include "Application.h"
 
 
@@ -42,10 +39,10 @@ int main() {
         return 0;
     }
     try {
-        commandObj.exec(systemName);
-        std::string fileName = commandObj.outputFileName;
-        netInfo = FileUtils().viewContent(fileName);
         while (true) {
+            commandObj.exec(systemName);
+            std::string fileName = commandObj.outputFileName;
+            netInfo = FileUtils().viewContent(fileName);
             netTask();
             std::this_thread::sleep_for(std::chrono::milliseconds(initConfigObj.sleep));
         }
